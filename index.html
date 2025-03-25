@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-color: hsl(30, 38%, 92%);
+      --container-color: hsl(0, 0%, 100%) ;
+      --heading-color: hsl(212, 21%, 14%);
+      --text-color: hsl(228, 12%, 48%);
+      --btn-color: hsl(158, 36%, 37%);
+      --btn-hover-color: hsl(158, 42%, 18%);
+      --header-font: "Fraunces", serif;;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 1.4rem;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: .5rem;
+      margin: .5rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      gap: 1rem;
+    }
+
+    /*--------- MAIN CONTAINER ------------*/
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--container-color);
+      max-width: 40rem;
+      border-radius: .5rem;
+      overflow: hidden;
+    }
+
+    /*----------TOP CONTAINER-------------*/
+    .top-container {
+           
+    }
+
+    /*Image Section*/
+    .top-container img {
+      width: 100%;
+    }
+
+    .desktop-img {
+      display: none;
+    }
+
+    /*-----------BOTTOM CONTAINER-------------*/
+    .bottom-container {
+      margin: 1.5rem 2rem;
+    }
+
+    .bottom-container > *:first-child {
+      color: var(--text-color);
+      letter-spacing: .5rem;
+      text-transform: uppercase;   
+    }
+
+    .text {
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: var(--heading-color);
+      line-height: 1;
+      margin: 1rem 0rem 1.5rem;
+      font-weight: 700;
+      font-family: var(--header-font);
+    }
+
+    /*Price Container*/
+    .price-container {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .price-container .discount-price {
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: var(--header-font);
+      color: var(--btn-color);
+    }
+
+    .price-container .price {
+      text-decoration: line-through;
+    }
+
+    /*Botton Style*/
+    .bottom-container a {
+      text-decoration: none;
+      color: white;
+      background-color: var(--btn-color);
+      padding: 1.5rem 1rem;
+      display: block;
+      text-align: center;
+      width: 100%;
+      border-radius: .5rem;
+      margin-top: 1.5rem;
+      margin-bottom: .5rem;
+    }
+
+    .bottom-container a:hover {
+      background-color: var(--btn-hover-color);
+    }
+
+    .bottom-container a span {
+      margin-left: .5rem;
+    }
+
+    /*----------RESPONSIVE DESIGN------------*/
+    @media (min-width: 768px) {
+      
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: var(--heading-color); }
+  </style>
+
+  <meta http-equiv="refresh" content="1">
+</head>
+<body>
+  <div class="main-container">
+    <div class="top-container">
+      <img src="images/image-product-desktop.jpg" alt="Product Image" class="desktop-img">
+      <img src="images/image-product-mobile.jpg" alt="Product Image" class="mobile-img">
+    </div>
+    <div class="bottom-container">
+      <p>Perfume</p>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p class='text'>A floral, solar and voluptuous<br>interpretation composed by Olivier<br> Polge, Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price-container">
+        <p class="discount-price">$149.99</p>
+        <p class="price">$169.99</p>
+      </div>
+        <a href="#" class="cart-btn">
+          <img src="images/icon-cart.svg">
+          <span>Add to Cart</span>
+        </img>
+        </a>    
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/AJsem" target="_blank">JxGrim</a>
+  </div>
+</body>
+</html>
